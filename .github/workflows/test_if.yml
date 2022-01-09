@@ -27,10 +27,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Pull Request
-        if: ${{github.event_naem}}=='pull_request' 
+        if: ${{github.event_name == 'pull_request'}}
         run: echo Pull Request!
 
       # Runs a set of commands using the runners shell
       - name: Push
-        if: ${{github.event_naem}}=='push' 
+        if: ${{github.event_name == 'push'}} 
         run: echo Push
