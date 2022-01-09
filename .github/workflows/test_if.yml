@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Action If Experiment
 
 # Controls when the workflow will run
 on:
@@ -16,21 +16,24 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  pull_request_validation:
+    if: ${{github.event_name == 'pull_request'}}
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
       - name: Pull Request
-        if: ${{github.event_name == 'pull_request'}}
         run: echo Pull Request!
 
-      # Runs a set of commands using the runners shell
-      - name: Push
-        if: ${{github.event_name == 'push'}} 
-        run: echo Push
+    push_job:
+      if: ${{github.event_name == 'push'}}
+      runs-on: ubuntu-latest
+        steps:
+          -uses: actions/checkout@v2
+
+          - name: Push
+          run: echo Push
