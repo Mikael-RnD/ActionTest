@@ -29,11 +29,11 @@ jobs:
       - name: Pull Request
         run: echo Pull Request!
 
-    push_job:
-      if: ${{github.event_name == 'push'}}
-      runs-on: ubuntu-latest
-        steps:
-          -uses: actions/checkout@v2
-
-          - name: Push
-          run: echo Push
+  testing_push:
+    if: ${{github.event_name == 'push'}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Push step
+        run: echo Push
