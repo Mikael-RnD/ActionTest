@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Pull Request
-        run: echo Pull Request! ${{ github.event.head_commit.message }}
+        run: echo 'Pull Request! ${{ github.event.head_commit.message }}'
 
   testing_push:
     if: ${{github.event_name == 'push'}}
