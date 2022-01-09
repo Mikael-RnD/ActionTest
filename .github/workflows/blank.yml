@@ -17,4 +17,4 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-      uses: Mikael-RnD/.github/.github/workflows/reusable.yml@main
+      uses: Mikael-RnD/.github/.github/workflows/not-as-action.yml@main
