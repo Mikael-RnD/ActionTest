@@ -3,10 +3,13 @@ name: UiPath CI/CD
 on:
   push:
     branches: [ main ]
+  pull_request: 
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   build:
+    if: ${{github.event_name == 'push'}}
     uses: Mikael-RnD/.github/.github/workflows/uipath-pack-and-analyze.yml@main
     with:
       project_path: "${{github.workspace}}/TheProject/project.json"
