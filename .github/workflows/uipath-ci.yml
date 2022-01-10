@@ -1,0 +1,9 @@
+name: UiPath CI/CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    uses: Mikael-RnD/.github/.github/workflows/uipath-pack-and-analyze.yml@main
