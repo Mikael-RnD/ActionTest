@@ -25,7 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - run: |
+      - name: Setup UiPath CLI
+        run: |
            New-Item -Path "${{ github.workspace }}" -ItemType "directory" -Name "uipathcli";
            Invoke-WebRequest "https://www.myget.org/F/uipath-dev/api/v2/package/UiPath.CLI/1.0.7985.19721" -OutFile "${{ github.workspace }}\\cli.zip";
            Expand-Archive -LiteralPath "${{ github.workspace }}\\cli.Zip" -DestinationPath "${{ github.workspace }}\\uipathcli";
