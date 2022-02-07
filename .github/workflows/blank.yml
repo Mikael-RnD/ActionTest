@@ -39,9 +39,5 @@ jobs:
             {
               & "C:\\uipathcli\\lib\\net461\\uipcli.exe" package analyze "$package" --analyzerTraceLevel "Warning" --stopOnRuleViolation
             }
-            
-      - name: Setup UiPath CLI
-        run: |
-           New-Item -Path "${{ github.workspace }}" -ItemType "directory" -Name "uipathcli";
-           Invoke-WebRequest "https://www.myget.org/F/uipath-dev/api/v2/package/UiPath.CLI/1.0.7985.19721" -OutFile "${{ github.workspace }}\\cli.zip";
-           Expand-Archive -LiteralPath "${{ github.workspace }}\\cli.Zip" -DestinationPath "${{ github.workspace }}\\uipathcli";
+      
+      - uses: ./github/setup-uipath
