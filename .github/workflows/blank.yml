@@ -40,4 +40,4 @@ jobs:
  #             & "C:\\uipathcli\\lib\\net461\\uipcli.exe" package analyze "$package" --analyzerTraceLevel "Warning" --stopOnRuleViolation
  #           }
       
-      - uses: Mikael-RnD./github/setup-uipath@main
+      - uses: actions/UiPath-Analyze@main
