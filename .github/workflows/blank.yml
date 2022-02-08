@@ -27,6 +27,7 @@ jobs:
       - uses: Mikael-RnD/UiPath-Pack-Analyze@main
       
   deploy:
+    needs: build
     runs-on: windows-2019
     steps:
       - name: Download a Build Artifact
