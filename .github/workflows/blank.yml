@@ -25,6 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - uses: Mikael-RnD/UiPath-Pack-Analyze@main
+      
+  deploy:
+    runs-on: windows-2019
+    steps:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v2.1.0
         with:
