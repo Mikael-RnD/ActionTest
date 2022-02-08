@@ -37,3 +37,10 @@ jobs:
           name: artifact # optional
           # Destination path
           path: ${{github.workspace}} # optional
+      - uses: Mikael-Rnd/UiPath-Deploy@main
+        with:
+          orchestratorUrl: https://cloud.uipath.com/hppcntv
+          orchestratorFolderPath: "Test"
+          orchestratorTenant: Mikaels_RnD
+          orchestratorApiKey: ${{ github.secrets.UIPATH_API_KEY }}
+          
