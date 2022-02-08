@@ -24,20 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
- #     - name: Setup CLI
- #       shell: pwsh
- #       run: |
- #              New-Item -Path "C:\\" -ItemType "directory" -Name "uipathcli";
- #              Invoke-WebRequest "https://www.myget.org/F/uipath-dev/api/v2/package/UiPath.CLI/1.0.7985.19721" -OutFile "C:\\uipathcli\\cli.zip";
- #              Expand-Archive -LiteralPath "C:\\uipathcli\\cli.Zip" -DestinationPath "C:\\uipathcli";
-
- #     - name: Analyze
- #       shell: pwsh
- #       run: |
- #         foreach($package in Get-ChildItem -Path ${{ github.workspace }} -Recurse -Filter project.json -File)
- #           {
- #             & "C:\\uipathcli\\lib\\net461\\uipcli.exe" package analyze "$package" --analyzerTraceLevel "Warning" --stopOnRuleViolation
- #           }
-      
-      - uses: Mikael-RnD/UiPath-Analyze@main
+      - uses: Mikael-RnD/UiPath-Pack-Analyze@main
+      - name: Download a Build Artifact
+      - uses: actions/download-artifact@v2.1.0
+        with:
+          # Artifact name
+          name: artifact # optional
+          # Destination path
+          path: ${{github.workspace}} # optional
