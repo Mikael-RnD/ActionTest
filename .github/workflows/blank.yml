@@ -41,7 +41,7 @@ jobs:
           # Destination path
           path: ${{github.workspace}} # optional
       - name: UiPath Deploy
-        uses: Mikael-Rnd/UiPath-Deploy@main
+        uses: Mikael-RnD/UiPath-Deploy@main
         with:
           orchestratorUrl: https://cloud.uipath.com/hppcntv
           orchestratorFolderPath: "Test"
