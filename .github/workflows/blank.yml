@@ -51,6 +51,5 @@ jobs:
           orchestratorUrl: https://cloud.uipath.com/hppcntv
           orchestratorFolderPath: "Test"
           orchestratorTenant: Mikaels_RnD
-        env:
           orchestratorApiKey: $UIPATH_API_KEY
           
