@@ -28,6 +28,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - uses: Mikael-RnD/UiPath-Pack-Analyze@main
+      - uses: actions/upload-artifact@v2
+        with:
+          path: ${{ github.workspace }}/output
+          if-no-files-found: error
+          retention-days: 90
       
   deploy:
     needs: build
