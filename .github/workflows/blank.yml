@@ -27,6 +27,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - uses: Mikael-RnD/UiPath-Setup@main
       - uses: Mikael-RnD/UiPath-Pack-Analyze@main
       - uses: actions/upload-artifact@v2
         with:
@@ -45,6 +46,8 @@ jobs:
           name: artifact # optional
           # Destination path
           path: ${{github.workspace}} # optional
+      
+      - uses: Mikael-RnD/UiPath-Setup@main
       - name: UiPath Deploy
         uses: Mikael-RnD/UiPath-Deploy@main
         with:
