@@ -60,7 +60,7 @@ jobs:
       
       - uses: Mikael-RnD/UiPath-Setup@main
       - name: UiPath Deploy
-        uses: Mikael-RnD/UiPath-Deploy@basic_auth
+        uses: Mikael-RnD/UiPath-Deploy@main
         with:
           orchestratorUrl: ${{ env.ORCHESTRATOR_URL }}
           orchestratorTenant: ${{ env.ORCHESTRATOR_TENANT }}
