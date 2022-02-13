@@ -38,7 +38,7 @@ jobs:
           orchestratorTenant: ${{ env.ORCHESTRATOR_TENANT }}
           orchestratorFolder: ${{ env.ORCHESTRATOR_FOLDER }}
           orchestratorAccount: ${{ env.UIPATH_ACCOUNT }}
-          orchestratorPassword: ${{ envi.UIPATH_PASSWORD }}
+          orchestratorPassword: ${{ env.UIPATH_PASSWORD }}
           
       - uses: actions/upload-artifact@v2
         with:
