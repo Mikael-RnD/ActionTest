@@ -62,8 +62,9 @@ jobs:
       - name: UiPath Deploy
         uses: Mikael-RnD/UiPath-Deploy@main
         with:
-          orchestratorUrl: https://cloud.uipath.com/hppcntv
-          orchestratorFolderPath: "Test"
-          orchestratorTenant: Mikaels_RnD
-          orchestratorApiKey: $UIPATH_API_KEY
+          orchestratorUrl: ${{ env.ORCHESTRATOR_URL }}
+          orchestratorTenant: ${{ env.ORCHESTRATOR_TENANT }}
+          orchestratorFolder: ${{ env.ORCHESTRATOR_FOLDER }}
+          orchestratorUsername: ${{ env.UIPATH_ACCOUNT }}
+          orchestratorPassword: ${{ env.UIPATH_PASSWORD }}
           
