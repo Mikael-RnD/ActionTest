@@ -67,4 +67,3 @@ jobs:
           orchestratorFolder: ${{ env.ORCHESTRATOR_FOLDER }}
           orchestratorUsername: ${{ env.UIPATH_ACCOUNT }}
           orchestratorPassword: ${{ env.UIPATH_PASSWORD }}
-          
