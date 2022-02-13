@@ -28,7 +28,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - uses: Mikael-RnD/UiPath-Setup@main
-      - uses: Mikael-RnD/UiPath-Pack-Analyze@main
+      - uses: Mikael-RnD/UiPath-Pack-Analyze@basic_auth
       - uses: actions/upload-artifact@v2
         with:
           path: ${{ github.workspace }}/output
