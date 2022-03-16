@@ -67,7 +67,7 @@ jobs:
           path: ${{github.workspace}} # optional
       
       # The UiPath CLI is installed on Runner
-      - uses: Mikael-RnD/UiPath-Setup@main
+      # - uses: Mikael-RnD/UiPath-Setup@main
       
       # .nupkg packages are deployed to UiPath Orchestrator
       # - name: UiPath Deploy
