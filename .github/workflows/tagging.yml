@@ -34,9 +34,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
-      
-      - name: Set release tag
-        run: ::set-env name=release_tag::${{ steps.bump_tag.outputs.new_tag }}
         
       - name: Automatic Releases
         # You may pin to the exact commit or the version.
@@ -46,4 +43,4 @@ jobs:
           # GitHub secret token
           repo_token: ${{ secrets.GITHUB_TOKEN}}
               # Git tag (for automatic releases)
-          automatic_release_tag: release_tag
+          automatic_release_tag: ${{ steps.bump_tag.outputs.new_tag }}
