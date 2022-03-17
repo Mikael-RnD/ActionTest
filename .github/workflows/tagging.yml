@@ -36,7 +36,7 @@ jobs:
           WITH_V: true
       
       - name: Set release tag
-        run: set-env name=release_tag::${{ steps.bump_tag.outputs.new_tag }}
+        run: ::set-env name=release_tag::${{ steps.bump_tag.outputs.new_tag }}
         
       - name: Automatic Releases
         # You may pin to the exact commit or the version.
