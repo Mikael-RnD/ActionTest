@@ -44,3 +44,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN}}
               # Git tag (for automatic releases)
           automatic_release_tag: ${{ steps.bump_tag.outputs.new_tag }}
+          prerelease: false
