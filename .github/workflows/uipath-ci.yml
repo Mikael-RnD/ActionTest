@@ -64,6 +64,7 @@ jobs:
     runs-on: windows-2019
     needs: tag
     steps:
+      - run: exit 1
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
@@ -91,9 +92,9 @@ jobs:
       
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
     steps:
-      - run: exit 1
+      
       
       # Download .nupkg packages created in build job to GitHub workspace
       - name: Download a Build Artifact
