@@ -38,14 +38,14 @@ jobs:
       - uses: Mikael-RnD/UiPath-Setup@main
       
       # Run workflow analysis on and pack UiPath projects
-      - uses: Mikael-RnD/UiPath-Pack-Analyze@main
-        if: ${{ github.event_name == 'push' }}
-        with:
-          orchestratorUrl: ${{ env.ORCHESTRATOR_URL }}
-          orchestratorTenant: ${{ env.ORCHESTRATOR_TENANT }}
-          orchestratorFolder: ${{ env.ORCHESTRATOR_FOLDER }}
-          orchestratorUsername: ${{ env.UIPATH_ACCOUNT }}
-          orchestratorPassword: ${{ env.UIPATH_PASSWORD }}
+ #     - uses: Mikael-RnD/UiPath-Pack-Analyze@main
+ #       if: ${{ github.event_name == 'push' }}
+ #       with:
+ #         orchestratorUrl: ${{ env.ORCHESTRATOR_URL }}
+ #         orchestratorTenant: ${{ env.ORCHESTRATOR_TENANT }}
+ #         orchestratorFolder: ${{ env.ORCHESTRATOR_FOLDER }}
+ #         orchestratorUsername: ${{ env.UIPATH_ACCOUNT }}
+ #         orchestratorPassword: ${{ env.UIPATH_PASSWORD }}
           
       # Upload packages as build artifacts to be handled by deploy job
       - uses: actions/upload-artifact@v2
@@ -79,3 +79,15 @@ jobs:
       #    orchestratorFolder: ${{ env.ORCHESTRATOR_FOLDER }}
       #    orchestratorUsername: ${{ env.UIPATH_ACCOUNT }}
       #    orchestratorPassword: ${{ env.UIPATH_PASSWORD }}
+
+  failed_build:
+    runs-on: ubuntu-latest
+    needs: [build]
+    if: failure()
+    steps:
+      - uses: dev-drprasad/delete-tag-and-release@v0.2.0
+        with:
+          delete_release: true # default: false
+          tag_name: ${{ needs.build.steps.bump_tag.outputs.new_tag }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
