@@ -28,6 +28,9 @@ env:
 jobs:
   tag:
     runs-on: ubuntu-latest
+    outputs: 
+      release_tag: steps.bump_tag.outputs.new_tag
+      
     steps: 
       - uses: actions/checkout@v2
         with:
@@ -121,6 +124,6 @@ jobs:
       - uses: dev-drprasad/delete-tag-and-release@v0.2.0
         with:
           delete_release: true # default: false
-          tag_name: ${{ needs.tag.steps.bump_tag.outputs.new_tag }}
+          tag_name: ${{ needs.tag.outputs.release_tag }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
