@@ -78,6 +78,8 @@ jobs:
           orchestratorUsername: ${{ env.UIPATH_ACCOUNT }}
           orchestratorPassword: ${{ env.UIPATH_PASSWORD }}
           
+      - run: exit 1
+      
       # Upload packages as build artifacts to be handled by deploy job
       - uses: actions/upload-artifact@v2
         with:
