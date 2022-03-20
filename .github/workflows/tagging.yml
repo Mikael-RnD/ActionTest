@@ -52,5 +52,5 @@ jobs:
           # GitHub secret token
           repo_token: ${{ secrets.GITHUB_TOKEN}}
               # Git tag (for automatic releases)
-          automatic_release_tag: ${{ steps.bump_tag.outputs.new_tag }}
+          automatic_release_tag: ${{ needs.build.steps.bump_tag.outputs.new_tag }}
           prerelease: false
