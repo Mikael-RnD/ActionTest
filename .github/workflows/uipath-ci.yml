@@ -117,7 +117,7 @@ jobs:
     needs: [tag,build]
     if: success()
     steps:
-      - run: echo Färdig
+      - run: echo ${{ needs.tag.outputs.release_upload_url }}
 
 
   failed_build:
