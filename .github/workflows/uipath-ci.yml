@@ -56,6 +56,8 @@ jobs:
           automatic_release_tag: ${{ steps.bump_tag.outputs.new_tag }}
           prerelease: ${{ github.event_name != 'push' }}
       - run: echo ${{ steps.automatic_release.outputs.upload_url }}
+      
+      
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -64,7 +66,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - run: exit 1
+
       # The UiPath CLI is installed on Runner
       - uses: Mikael-RnD/UiPath-Setup@main
       
