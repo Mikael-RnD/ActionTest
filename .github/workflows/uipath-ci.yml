@@ -64,7 +64,6 @@ jobs:
     runs-on: windows-2019
     needs: tag
     steps:
-      - run: exit 1
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
@@ -80,8 +79,6 @@ jobs:
           orchestratorFolder: ${{ env.ORCHESTRATOR_FOLDER }}
           orchestratorUsername: ${{ env.UIPATH_ACCOUNT }}
           orchestratorPassword: ${{ env.UIPATH_PASSWORD }}
-          
-      
       
       # Upload packages as build artifacts to be handled by deploy job
       - uses: actions/upload-artifact@v2
@@ -94,8 +91,6 @@ jobs:
     needs: build
     runs-on: windows-2019
     steps:
-      
-      
       # Download .nupkg packages created in build job to GitHub workspace
       - name: Download a Build Artifact
         uses: actions/download-artifact@v2.1.0
