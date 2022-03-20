@@ -39,6 +39,7 @@ jobs:
       
       # Run workflow analysis on and pack UiPath projects
       - uses: Mikael-RnD/UiPath-Pack-Analyze@main
+        if: ${{ github.event_name == 'push' }}
         with:
           orchestratorUrl: ${{ env.ORCHESTRATOR_URL }}
           orchestratorTenant: ${{ env.ORCHESTRATOR_TENANT }}
@@ -78,11 +79,3 @@ jobs:
       #    orchestratorFolder: ${{ env.ORCHESTRATOR_FOLDER }}
       #    orchestratorUsername: ${{ env.UIPATH_ACCOUNT }}
       #    orchestratorPassword: ${{ env.UIPATH_PASSWORD }}
-      
-      #comment
-      - name: Github Tag Bump
-        # You may pin to the exact commit or the version.
-        # uses: anothrNick/github-tag-action@ce4b5ffa38e072fa7a901e417253c438fcc2ccce
-        uses: anothrNick/github-tag-action@1.36.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
