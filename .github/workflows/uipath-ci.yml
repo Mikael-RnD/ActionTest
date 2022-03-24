@@ -66,9 +66,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      - name: Install Chocolatey pkg
+  # You may pin to the exact commit or the version.
+  # uses: Tyler887/chocolatey-install@7c913058b09c2f7a474bfeb9a80dabf615823483
+        uses: Tyler887/chocolatey-install@1.0
+      - run: choco install UiPath.CLI --version 1.0.7985.19721 --source https://www.myget.org/F/uipath-dev/api/v2
       # The UiPath CLI is installed on Runner
-      - uses: Mikael-RnD/UiPath-Setup@main
+ #     - uses: Mikael-RnD/UiPath-Setup@main
       
       # Run workflow analysis on and pack UiPath projects
       - uses: Mikael-RnD/UiPath-Pack-Analyze@main
