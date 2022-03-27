@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single call to reusable workflow
-  build:
+  mikael-pipeline:
     uses: Mikael-RnD/ReusableWorkflows/.github/workflows/reusable1.yml@main
     with:
       orchestratorFolder: Shared
@@ -24,4 +24,5 @@ jobs:
     secrets:
       orchestratorUsername: ${{ secrets.UIPATH_ACCOUNT }}
       orchestratorPassword: ${{ secrets.UIPATH_PASSWORD }}
-      
+    
+    
