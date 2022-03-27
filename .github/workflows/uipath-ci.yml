@@ -61,13 +61,14 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: tag
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        
-      - run: choco install UiPath.CLI --version 1.0.7985.19721 --source https://www.myget.org/F/uipath-dev/api/v2
+      
+      - uses: Mikael-RnD/UiPath-Setup@main
+      # - run: choco install UiPath.CLI --version 1.0.7985.19721 --source https://www.myget.org/F/uipath-dev/api/v2
       
       - uses: Mikael-RnD/UiPath-Pack-Analyze@main
         if: ${{ github.event_name == 'push' }}
