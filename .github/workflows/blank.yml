@@ -18,3 +18,10 @@ jobs:
   # This workflow contains a single call to reusable workflow
   build:
     uses: Mikael-RnD/ReusableWorkflows/.github/workflows/reusable1.yml@main
+    with:
+      orchestratorFolder: Shared
+      orchestratorTenant: Default
+    secrets:
+      orchestratorUsername: ${{ secrets.UIPATH_ACCOUNT }}
+      orchestratorPassword: ${{ secrets.UIPATH_PASSWORD }}
+      
