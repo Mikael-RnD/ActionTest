@@ -24,5 +24,3 @@ jobs:
     secrets:
       orchestratorUsername: ${{ secrets.UIPATH_ACCOUNT }}
       orchestratorPassword: ${{ secrets.UIPATH_PASSWORD }}
-    
-    
