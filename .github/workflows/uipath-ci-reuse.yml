@@ -1,6 +1,6 @@
 # A CI workflow for UiPath projects
 
-name: Reusable workflow
+name: UiPath CI
 
 # Controls when the workflow will run
 on:
