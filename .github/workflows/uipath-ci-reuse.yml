@@ -23,6 +23,6 @@ jobs:
       orchestratorFolder: Shared
     secrets:
       orchestratorTenant: ${{ secrets.UIPATH_TENANT }}
-      orchestratorUsername: ${{ secrets.UIPATH_ACCOUNT }}
-      orchestratorPassword: ${{ secrets.UIPATH_PASSWORD }}
+      orchestratorApplicationId: ${{ secrets.UIPATH_APP_ID }}
+      orchestratorApplicationSecret: ${{ secrets.UIPATH_APP_SECRET }}
       organizationId: ${{ secrets.UIPATH_ORGANIZATION_ID }}
