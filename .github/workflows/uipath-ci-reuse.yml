@@ -19,8 +19,10 @@ jobs:
   mikael-pipeline:
     uses: Mikael-RnD/ReusableWorkflows/.github/workflows/uipath-flow.yml@main
     with:
+      orchestratorUrl: "https://cloud.uipath.com/"
       orchestratorFolder: Shared
-      orchestratorTenant: Default
     secrets:
+      orchestratorTenant: ${{ secrets.UIPATH_TENANT }}
       orchestratorUsername: ${{ secrets.UIPATH_ACCOUNT }}
       orchestratorPassword: ${{ secrets.UIPATH_PASSWORD }}
+      organizationId: ${{ secrets.UIPATH_ORGANIZATION_ID }}
