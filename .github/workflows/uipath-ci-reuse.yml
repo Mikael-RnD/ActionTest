@@ -25,4 +25,5 @@ jobs:
       orchestratorTenant: ${{ secrets.UIPATH_TENANT }}
       orchestratorApplicationId: ${{ secrets.UIPATH_APP_ID }}
       orchestratorApplicationSecret: ${{ secrets.UIPATH_APP_SECRET }}
+      orchestratorApplicationScope: ${{ secrets.UIPATH_APP_SCOPE }} 
       organizationId: ${{ secrets.UIPATH_ORGANIZATION_ID }}
