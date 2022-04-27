@@ -1,6 +1,6 @@
 # ActionTest
 ## Demo project
-A REFramework based project to test CI/CD for UiPath with GitHub Actions
+A REFramework based project to test CI/CD for UiPath with GitHub Actions.
 
 ## List of utilized actions
 |Action name|Link|
