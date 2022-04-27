@@ -7,4 +7,5 @@ A REFramework based project  to test UiPath GitHub Actions
 |------|-------|
 | UiPath Setup | https://github.com/Mikael-RnD/UiPath-Setup |
 | UiPath Pack-Analyze | https://github.com/Mikael-RnD/UiPath-Pack-Analyze |
+| UiPath Test | https://github.com/Mikael-RnD/UiPath-Test |
 | UiPath Deploy | https://github.com/Mikael-RnD/UiPath-Deploy |
