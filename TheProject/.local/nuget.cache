@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SDqWir2yLlvQxsBPTFiwQP47nZwU9q3sU7nuzvW19cQVdFHLf8mtJ1KsS1QeGLu0ink1dCN/+ApcQtr6LxsuEA==",
+  "dgSpecHash": "+Lh5Tt1omXeZFoF37mwu32HstRxneeS9zFNUnVg/Fy3GmLis4aCrGr9wDezt+WHVIlpMJ0m+fxNKYZ7mI+HhMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mikael\\Documents\\GitHub\\ActionTest\\TheProject\\TheProject\\.local\\",
+  "projectFilePath": "C:\\Users\\Mikael\\Documents\\GitHub\\ActionTest\\TheProject\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\Mikael\\.nuget\\packages\\closedxml\\0.87.1\\closedxml.0.87.1.nupkg.sha512",
     "C:\\Users\\Mikael\\.nuget\\packages\\csvhelper\\16.0.0\\csvhelper.16.0.0.nupkg.sha512",

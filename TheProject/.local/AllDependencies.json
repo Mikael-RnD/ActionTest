@@ -7569,9 +7569,9 @@
     "restore": {
       "projectUniqueName": "TheProject",
       "projectName": "TheProject",
-      "projectPath": "C:\\Users\\Mikael\\Documents\\GitHub\\ActionTest\\TheProject\\TheProject\\.local",
+      "projectPath": "C:\\Users\\Mikael\\Documents\\GitHub\\ActionTest\\TheProject\\.local",
       "packagesPath": "C:\\Users\\Mikael\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mikael\\Documents\\GitHub\\ActionTest\\TheProject\\TheProject\\.local"
+      "outputPath": "C:\\Users\\Mikael\\Documents\\GitHub\\ActionTest\\TheProject\\.local"
     },
     "frameworks": {
       "net461": {

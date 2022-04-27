@@ -39,7 +39,20 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "ad983d02-7044-4b3f-82d9-23484b6ebc69",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase_ToBePublished.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3a408f9b-24c4-4dcc-8f1e-e760a39ad661",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase_NotToBePublished.xaml"
+      }
+    ],
     "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
