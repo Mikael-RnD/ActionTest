@@ -9,12 +9,13 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
 
   # This workflow contains a single call to reusable workflow
   mikael-pipeline:
-    uses: Mikael-RnD/ReusableWorkflows/.github/workflows/uipath-flow.yml@semantic-version-tag
+    uses: Mikael-RnD/ReusableWorkflows/.github/workflows/uipath-flow.yml@main
     with:
       orchestratorUrl: "https://cloud.uipath.com/"
       orchestratorFolder: Shared
