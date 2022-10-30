@@ -14,7 +14,7 @@ jobs:
         with:
           repository: Mikael-RnD/.github
           path: org-templates
-        
+      - run: mv org-templates/labeler-yml ${{ github.workspace }}/.github
       - uses: actions/labeler@v4
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
