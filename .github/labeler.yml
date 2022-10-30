@@ -2,7 +2,7 @@ ci/cd:
   - .github/workflows/*
 
 codeowners change:
-  - */CODEOWNERS
+  - CODEOWNERS
 
 documentation:
   - README.md
