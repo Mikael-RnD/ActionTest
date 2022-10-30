@@ -23,10 +23,10 @@ framework:
   - ./**/Framework/**
   
 templates:
-  - ./**/Data/Templates/**
+  - ./*/Data/Templates/**
 
 main: 
-  - ./**/Main.xaml
+  - ./*/Main.xaml
 
 process:
   - ./**/Process.xaml
