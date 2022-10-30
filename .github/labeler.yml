@@ -1,8 +1,26 @@
 ci/cd:
   - .github/workflows/*
 
+codeowners change:
+  - **/CODEOWNERS
+
 documentation:
   - README.md
+  - ./*.md
+  - ./**/Documentation/*
+  
+performer:
+  - Perfomer/**
 
-robot:
-  - ./*.xaml
+dispatcher:
+  - Dispatcher/**
+  
+configuration:
+  - ./**/Data/Config.xlsx
+  - ./**/Framework/InitAllSettings.xaml
+
+framework:
+  - ./**/Framework/**
+  
+templates:
+  - ./Data/Templates/**
