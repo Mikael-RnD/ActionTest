@@ -10,14 +10,6 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/checkout@v3
-        with:
-          repository: Mikael-RnD/.github
-          path: org-templates
-      - run: ls ${{ github.workspace }}/org-templates
-      - run: mv "${{ github.workspace }}/org-templates/labeler-yml" "${{ github.workspace }}/.github"
       - uses: actions/labeler@v4
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          configuration-path: ${{ github.workspace }}/org-templates/labeler.yml
