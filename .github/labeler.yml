@@ -8,6 +8,7 @@ documentation:
   - README.md
   - ./*.md
   - ./Documentation/**
+  - ./*.docx
   
 performer:
   - Performer/**
@@ -27,6 +28,7 @@ framework:
 
 templates:
   - Performer/Data/Templates/**
+  - Dispatcher/Data/Templates/**
 
 main: 
   - Performer/Main.xaml
