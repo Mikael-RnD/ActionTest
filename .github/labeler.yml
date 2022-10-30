@@ -16,17 +16,18 @@ dispatcher:
   - Dispatcher/**
   
 configuration:
-  - ./*/Config.xlsx
-  - ./*/Framework/InitAllSettings.xaml
+  - Performer/Data/Config.xlsx
+  - Performer/Framework/InitAllSettings.xaml
 
 framework:
-  - ./**/Framework/**
+  - Performer/Framework/**
   
 templates:
-  - ./*/Data/Templates/**
+  - Performer/Data/Templates/**
 
 main: 
-  - ./*/Main.xaml
+  - Performer/Main.xaml
+  - Dispatcher/Main.xaml
 
 process:
-  - ./**/Process.xaml
+  - Performer/**/Process.xaml
