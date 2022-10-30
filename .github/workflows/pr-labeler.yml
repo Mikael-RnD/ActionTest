@@ -1,0 +1,12 @@
+name: Pull Request Labeling
+
+on:
+  - pull_request
+  
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - actions/labeler@v4
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        sync-labels: true
