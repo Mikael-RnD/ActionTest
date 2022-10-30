@@ -16,8 +16,8 @@ dispatcher:
   - Dispatcher/**
   
 configuration:
-  - ./**/Data/Config.xlsx
-  - ./**/Framework/InitAllSettings.xaml
+  - ./*/Config.xlsx
+  - ./*/Framework/InitAllSettings.xaml
 
 framework:
   - ./**/Framework/**
