@@ -17,11 +17,14 @@ dispatcher:
   
 configuration:
   - Performer/Data/Config.xlsx
+  - Dispatcher/Data/Config.xlsx
   - Performer/Framework/InitAllSettings.xaml
+  - Dispatcher/Framework/InitAllSettings.xaml
 
 framework:
   - Performer/Framework/**
-  
+  - Dispatcher/Framework/**
+
 templates:
   - Performer/Data/Templates/**
 
