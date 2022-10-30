@@ -10,10 +10,10 @@ documentation:
   - ./**/Documentation/*
   
 performer:
-  - ./Perfomer/**
+  - Performer/**
 
 dispatcher:
-  - ./Dispatcher/**
+  - Dispatcher/**
   
 configuration:
   - ./**/Data/Config.xlsx
