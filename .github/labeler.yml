@@ -3,3 +3,6 @@ ci/cd:
 
 documentation:
   - README.md
+
+robot:
+  - *./*.xaml
