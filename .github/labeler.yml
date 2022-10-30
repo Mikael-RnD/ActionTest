@@ -7,7 +7,7 @@ codeowners change:
 documentation:
   - README.md
   - ./*.md
-  - ./*/Documentation/**
+  - ./Documentation/**
   
 performer:
   - Performer/**
