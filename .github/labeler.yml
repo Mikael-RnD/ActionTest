@@ -7,26 +7,32 @@ codeowners change:
 documentation:
   - README.md
   - ./*.md
-  - ./**/Documentation/*
+  - ./Documentation/**
+  - ./**/*.docx
   
 performer:
-  - ./Perfomer/**
+  - Performer/**
 
 dispatcher:
-  - ./Dispatcher/**
+  - Dispatcher/**
   
 configuration:
-  - ./**/Data/Config.xlsx
-  - ./**/Framework/InitAllSettings.xaml
+  - Performer/Data/Config.xlsx
+  - Dispatcher/Data/Config.xlsx
+  - Performer/Framework/InitAllSettings.xaml
+  - Dispatcher/Framework/InitAllSettings.xaml
 
 framework:
-  - ./**/Framework/**
-  
+  - Performer/Framework/**
+  - Dispatcher/Framework/**
+
 templates:
-  - ./**/Data/Templates/**
+  - Performer/Data/Templates/**
+  - Dispatcher/Data/Templates/**
 
 main: 
-  - ./**/Main.xaml
+  - Performer/Main.xaml
+  - Dispatcher/Main.xaml
 
 process:
-  - ./**/Process.xaml
+  - Performer/**/Process.xaml

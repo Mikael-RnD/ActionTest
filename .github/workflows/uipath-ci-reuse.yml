@@ -15,7 +15,7 @@ jobs:
 
   # This workflow contains a single call to reusable workflow
   mikael-pipeline:
-    uses: Mikael-RnD/ReusableWorkflows/.github/workflows/uipath-flow.yml@main
+    uses: Mikael-RnD/ReusableWorkflows/.github/workflows/uipath-flow.yml@different-tag-action
     with:
       orchestratorUrl: "https://cloud.uipath.com/"
       orchestratorFolder: Shared
